@@ -18,9 +18,7 @@ var app = new Vue(
 		methods: {
 			completeCeck(completeIndex){
 				this.promList[completeIndex].done = true;
-				if (done = true){
-					
-				}
+			
 			},
 		}
 	}

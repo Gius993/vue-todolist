@@ -40,6 +40,9 @@
     display: flex;
     justify-content: space-between;
 }
-.svolto{
+.check{
 	text-decoration: line-through;
+}
+.text-list{
+	cursor: pointer;
 }
