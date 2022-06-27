@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<div class="root">
+	<div id="root">
 		<div class="inputs">
 			<input type="text" placeholder="nuovo promemoria">
 			<button>Aggiungi</button>
@@ -20,9 +20,12 @@
 		<div class="todos-container">
 			
 			<ul class="todos-list">
-				<li class="todo">
+				<li class="todo" v-for="(list, index) in promList">
+					 <span @click="completeCeck(index)" class="text-list">	
+						{{ list.text }}
+					 </span>
 					
-					<div class="promemoria">
+					 <div class="promemoria">
 
 					</div>
 				</li>
