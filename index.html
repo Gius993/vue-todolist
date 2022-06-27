@@ -13,25 +13,29 @@
 <body>
 	<div id="root">
 		<div class="inputs">
-			<input type="text" placeholder="nuovo promemoria">
-			<button>Aggiungi</button>
+			<input v-model="newListText" @keyup.enter="addNewText()" type="text" placeholder="nuovo promemoria">
+			<button @click="addNewText()">Aggiungi</button>
 		</div>
 		<!--oggetti-->
 		<div class="todos-container">
 			
 			<ul class="todos-list">
 				<li class="todo" v-for="(list, index) in promList">
-					 <span @click="completeCeck(index)"  
-					 class="text-list" 
-					 :class="{'check': list.done}">	
+					<span @click="completeCeck(index)"  
+						 class="text-list" 
+					 	:class="{'check': list.done}">	
 					
-					 	{{ list.text }}
+					 		{{ list.text }}
 					
-					</span>
+						</span>
+						<div class="action">
+							<span @click="removeList(index)">
+								
+								<i class="fa fa-times" aria-hidden="true"></i>
+							
+							</span>
+						</div>
 					
-					 <div class="promemoria">
-
-					</div>
 				</li>
 			</ul>
 
